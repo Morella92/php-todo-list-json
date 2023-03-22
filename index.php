@@ -18,8 +18,8 @@
         <div class="container py-5">
             <input @keyup.enter="saveItem" v-model="newItem" class="form-control mb-2" type="text" name="item" placeholder="New task" aria-label="default input example">
             <ul class="list-group">
-                <li v-for="item in list" :key="item" class="list-group-item">
-                    {{ item }}
+                <li v-for="item in list" :key="item" class="list-group-item" :class="{ 'text-decoration-line-through': item.completed }">
+                    {{ item.item }}
                 </li>
             </ul>
         </div>

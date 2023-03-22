@@ -10,25 +10,26 @@ createApp({
 	},
 	methods: {
 		saveItem() {
-
-			$data = {
-				item: this.newItem,
-			}
-
-			axios
-				.post('./server.php', $data, {
-					headers: {
-						'Content-Type': 'multipart/form-data',
-					},
-				})
-				.then((res) => {
-					this.list = res.data
-					this.newItem = ''
-				})
-				.catch((err) => {
-					console.log(err)
-				})
-		},
+            const data = {
+              item: this.newItem,
+              completed: false
+            };
+          
+            axios
+            .post('./server.php', data, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+            })
+            .then((res) => {
+                this.list.push(res.data)
+                this.newItem = ''
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        },
+          
 		fetchList() {
 			axios
 				.get('./server.php')

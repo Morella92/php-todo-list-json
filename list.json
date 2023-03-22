@@ -1,1 +1,1 @@
-["Fare la spesa","Cucinare","Portare il cane a spasso","Pulizie di primavera","Chiamare la nonna","ciao"]
+[{"item":"Fare la spesa","completed":false},{"item":"Cucinare","completed":true},{"item":"Portare il cane a spasso","completed":false},{"item":"Pulizie di primavera","completed":false},{"item":"Chiamare la nonna","completed":true},"ciao"]
